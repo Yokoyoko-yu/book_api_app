@@ -1,0 +1,22 @@
+<h1>検索結果</h1>
+<%=link_to "検索画面に戻る",search_author_path%>
+<%@data_item.each do |item|%>
+<%category=item.xpath('category[1]').text%>
+<%if category=="図書"%>
+<%# 書影 %>
+<%isbn=item.xpath('dc:identifier[1]').text%>
+<%#タイトル  %>
+<%title=CGI.unescapeHTML(item.xpath('title').text)%>
+
+<%# 著者 %>
+<%authors=item.xpath('dc:creator')%>
+<%authors.each do |author|%>
+<%end%>
+<%# 出版社 %>
+<%publisher=CGI.unescapeHTML(item.xpath('dc:publisher').text)%>
+<%# 出版年 %>
+<%publish_year=CGI.unescapeHTML(item.xpath('dcterms:issued').text)%>
+
+<%=render partial:'/show_template',locals:{isbn:isbn,title:title,authors:authors,publisher:publisher,publish_year:publish_year}%>
+<%end%>
+<%end%>

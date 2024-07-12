@@ -1,0 +1,6 @@
+<h1>書影検索</h1>
+<%=form_with url:find_image_path do |f|%>
+<%=f.label :ISBN%>
+<%=f.text_field :ISBN%>
+<%=f.submit "検索する"%>
+<%end%>

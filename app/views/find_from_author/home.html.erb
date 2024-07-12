@@ -1,0 +1,14 @@
+<h1>著者名検索</h1>
+<%=form_with url:find_author_path do |f|%>
+<%=f.label :author%>
+<%=f.text_field :author%>
+<%=f.submit "検索する"%>
+<%end%>
+
+<h1>タイトル検索</h1>
+<%=form_with url:find_author_path do |f|%>
+<%=f.label :title%>
+<%=f.text_field :title%>
+<%=f.submit "検索する"%>
+<%end%>
+<%=link_to "ホームに戻る",root_path%>

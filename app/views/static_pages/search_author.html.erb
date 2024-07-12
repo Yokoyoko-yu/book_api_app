@@ -1,0 +1,6 @@
+<h1>著者名から検索</h1>
+<%=form_with url:show_author_path do |f|%>
+    <%=f.label "author"%>
+    <%=f.text_field "author"%>
+    <%=f.submit "検索"%>
+<%end%>

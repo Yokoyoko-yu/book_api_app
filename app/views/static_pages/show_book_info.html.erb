@@ -1,0 +1,10 @@
+<h1>書影</h1>
+<img src="data:image/jpeg;base64,<%= Base64.strict_encode64(@book_image) %>",alt="">
+<%=@book_title%>
+<h1>検索画面</h1>
+<%=form_with url:show_image_path do |f|%>
+<%=f.label :ISBN%>
+<%=f.text_field :ISBN%>
+<%=f.submit "検索する"%>
+<%end %>
+<%=link_to "著者名から検索する",search_author_path %>

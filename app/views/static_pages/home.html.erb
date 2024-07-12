@@ -1,0 +1,9 @@
+<h1>検索画面</h1>
+<%=form_with url:find_image_path do |f|%>
+<%=f.label :ISBN%>
+<%=f.text_field :ISBN%>
+<%=f.submit "検索する"%>
+<%end%>
+<img src="data:image/jpeg;base64,<%= Base64.strict_encode64(@image_data) %>" alt="NDL Image">
+<%=link_to "書影検索",search_image_path%>
+<%=link_to "著者検索",search_author_path%>
