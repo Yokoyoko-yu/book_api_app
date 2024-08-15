@@ -16,7 +16,14 @@
 <%publisher=CGI.unescapeHTML(item.xpath('dc:publisher').text)%>
 <%# 出版年 %>
 <%publish_year=CGI.unescapeHTML(item.xpath('dcterms:issued').text)%>
-
+<table>
+<tr>
+<th class="num_top">番号</th>
+<th class="title_top">タイトル</th>
+<th class="author_top">著者<br>出版社</th>
+<th class="publish_year_top">出版年</th>
+</tr>
 <%=render partial:'/show_template',locals:{isbn:isbn,title:title,authors:authors,publisher:publisher,publish_year:publish_year}%>
+</table>
 <%end%>
 <%end%>

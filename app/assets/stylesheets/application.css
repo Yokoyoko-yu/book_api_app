@@ -14,26 +14,20 @@
  *= require_self
  */
 
- .book_info{
-    display: flex;
-    height:100px;
-    padding-bottom: 10px;
-    padding: 0,100px;
-    width:600px;
-    margin:0 auto;
+ table{
+    margin: 0 auto;
+    width: 500px;
  }
-
- .book_image{
+ .titles{
+    display: flex;
+ }
+ th{background-color: darkkhaki;}
+ td{
     height: 100px;
  }
+ th
  .photo{
-    object-fit: contain;
-    max-height: 100%;
+    width: 30%;
+    height: 100%;
  }
- .title{
-    vertical-align: center;
-    margin: 0 10px;
- }
- .publish_info,.year{
-    margin:auto 10px;
- }
+ 
